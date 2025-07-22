@@ -106,10 +106,10 @@ const App = () => {
   };
 
   const pageTransition = {
-    type: 'tween' as const,
+    type: 'tween',
     ease: 'anticipate',
     duration: 0.5,
-  };
+  } as const;
 
   const renderScreen = () => {
     let screenComponent;
@@ -182,8 +182,8 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gray-200 min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-sm h-[800px] bg-gray-50 rounded-3xl shadow-2xl overflow-hidden flex flex-col relative">
+    <div className="bg-gray-200 min-h-screen sm:flex sm:items-center sm:justify-center">
+      <div className="w-full max-w-sm h-screen sm:h-[800px] bg-gray-50 sm:rounded-3xl sm:shadow-2xl overflow-hidden flex flex-col relative mx-auto">
         <div className="flex-grow overflow-y-auto pb-20 scrollbar-hide">
             <AnimatePresence mode="wait">
                 {renderScreen()}
